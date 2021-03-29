@@ -58,7 +58,6 @@ for x in i.ip_range_generator():
 - "/0" is not supported in this version, but it will be "soon"
 
 ### Available Attributes
-### Available Attributes
 ```
 blocksize
 cidr
