@@ -20,6 +20,7 @@ for x in i.ip_range_generator():
 # 127.144.4.9/28
 # CIDR                    28
 # Mask                    255.255.255.240
+# Binary Mask             11110000
 # Range                   127.144.4.0 - 127.144.4.15
 # Blocksize               16
 # Subnet Addresses        16
