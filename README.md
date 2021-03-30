@@ -36,27 +36,6 @@ for x in i.ip_range_generator():
 # ...
 ```
 
-### Integration with IPv4Mutate [GitHub](https://github.com/bonifield/IPv4Mutate) [PyPi](https://pypi.org/project/ipv4mutate/)
-```
-from ipv4helper import IPv4Helper
-from ipv4mutate import IPv4Mutate
-i = IPv4Helper("127.144.4.9/28")
-for x in i.ip_range_generator():
-	z = IPv4Mutate(x)
-	print(z.mutate_hex)
-
-# snipped output
-# ...
-# 0x7f.0x90.0x4.0x0
-# 0x7f.0x90.0x4.0x1
-# 0x7f.0x90.0x4.0x2
-# 0x7f.0x90.0x4.0x3
-# ...
-```
-
-### Important Notes
-- "/0" is not supported in this version, but it will be "soon"
-
 ### Available Attributes
 ```
 blocksize
@@ -90,6 +69,27 @@ wildcard
 octet_generator()
 ip_range_generator()
 ```
+
+### Integration with IPv4Mutate [GitHub](https://github.com/bonifield/IPv4Mutate) [PyPi](https://pypi.org/project/ipv4mutate/)
+```
+from ipv4helper import IPv4Helper
+from ipv4mutate import IPv4Mutate
+i = IPv4Helper("127.144.4.9/28")
+for x in i.ip_range_generator():
+	z = IPv4Mutate(x)
+	print(z.mutate_hex)
+
+# snipped output
+# ...
+# 0x7f.0x90.0x4.0x0
+# 0x7f.0x90.0x4.0x1
+# 0x7f.0x90.0x4.0x2
+# 0x7f.0x90.0x4.0x3
+# ...
+```
+
+### Important Notes
+- "/0" is not supported in this version, but it will be "soon"
 
 ### TODO
 - better internal naming convention
